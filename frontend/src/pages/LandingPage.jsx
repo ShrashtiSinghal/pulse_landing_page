@@ -87,13 +87,20 @@ const LandingPage = () => {
             alt="Culinda Logo" 
             className="dark-logo"
           />
-          <nav className="dark-nav">
-            <a href="#features" className="dark-nav-link">Features</a>
-            <a href="#how-it-works" className="dark-nav-link">How It Works</a>
-            <a href="#integrations" className="dark-nav-link">Integrations</a>
-            <a href="#testimonials" className="dark-nav-link">Testimonials</a>
+          <nav className={`dark-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+            <a href="#features" className="dark-nav-link" onClick={() => setMobileMenuOpen(false)}>Features</a>
+            <a href="#how-it-works" className="dark-nav-link" onClick={() => setMobileMenuOpen(false)}>How It Works</a>
+            <a href="#integrations" className="dark-nav-link" onClick={() => setMobileMenuOpen(false)}>Integrations</a>
+            <a href="#testimonials" className="dark-nav-link" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
             <a href="https://pulsedemo.culinda.com/login" className="btn-primary">Login</a>
           </nav>
+          <button 
+            className="mobile-menu-toggle" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </header>
 
