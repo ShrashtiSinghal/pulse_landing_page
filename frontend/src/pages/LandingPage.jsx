@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Shield, Activity, Search, Users, Network, Lock, Zap } from 'lucide-react';
+import { ArrowRight, Shield, Activity, Search, Users, Network, Lock, Zap, Menu, X } from 'lucide-react';
 import '../styles/landing.css';
 
 const LandingPage = () => {
