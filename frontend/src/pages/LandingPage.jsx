@@ -315,7 +315,7 @@ const LandingPage = () => {
 
       {/* Mascot - Fixed Bottom Right */}
       <a 
-        href="https://drive.google.com/your-demo-video-link" 
+        href="https://drive.google.com/file/d/19_iCm3FYdXiktIM-bJC8-CLgUOs4Y0R-/view?usp=sharing" 
         className="mascot-button"
         target="_blank"
         rel="noopener noreferrer"
@@ -326,6 +326,7 @@ const LandingPage = () => {
           alt="Pulse Mascot"
           className="mascot-image"
         />
+        <div className="mascot-tooltip">Watch Demo Video</div>
       </a>
     </div>
   );
