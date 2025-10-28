@@ -4,6 +4,7 @@ import '../styles/landing.css';
 
 const LandingPage = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
