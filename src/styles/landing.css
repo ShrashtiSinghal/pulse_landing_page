@@ -1160,10 +1160,19 @@ body {
   50% { transform: translateX(10px) rotate(5deg); }
 }
 
-@keyframes flowingLine {
-  0% { background: linear-gradient(90deg, transparent, transparent, transparent); }
-  50% { background: linear-gradient(90deg, transparent, var(--brand-primary), transparent); }
-  100% { background: linear-gradient(90deg, transparent, transparent, transparent); }
+@keyframes flowingConnection {
+  0% { 
+    background: linear-gradient(90deg, transparent, transparent, transparent);
+    opacity: 0.3;
+  }
+  50% { 
+    background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
+    opacity: 1;
+  }
+  100% { 
+    background: linear-gradient(90deg, transparent, transparent, transparent);
+    opacity: 0.3;
+  }
 }
 
 @keyframes bubbleFloat {
