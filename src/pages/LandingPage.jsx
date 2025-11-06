@@ -22,11 +22,71 @@ const LandingPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
-
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      
+      // Header scroll effect
+      const header = document.querySelector('.dark-header');
+      if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+      }
+      
+      // Animate sections on scroll
+      animateOnScroll();
+    };
+    
+    const animateOnScroll = () => {
+      const sections = document.querySelectorAll('.section-content');
+      const featureCards = document.querySelectorAll('.feature-card');
+      const workflowSteps = document.querySelectorAll('.workflow-step');
+      
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+          section.classList.add('animate-in');
+        }
+      });
+      
+      featureCards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+          setTimeout(() => {
+            card.classList.add('animate-in');
+          }, index * 150);
+        }
+      });
+      
+      workflowSteps.forEach((step, index) => {
+        const rect = step.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+          setTimeout(() => {
+            step.classList.add('animate-in');
+          }, index * 200);
+        }
+      });
+    };
+
     window.addEventListener('scroll', handleScroll);
+    
+    // Initial animation check
+    setTimeout(animateOnScroll, 100);
+    
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Add floating particles to hero
+  useEffect(() => {
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+      // Add particles
+      for (let i = 0; i < 3; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.animationDelay = `${i * 5}s`;
+        heroSection.appendChild(particle);
+      }
+    }
   }, []);
 
   const features = [
