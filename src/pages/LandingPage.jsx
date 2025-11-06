@@ -68,12 +68,29 @@ const LandingPage = () => {
   ];
 
   const integrations = [
-    { name: 'Trellix', logo: trellix },
-    { name: 'LogRhythm', logo: logrhythm },
-    { name: 'Tenable', logo: tenable },
-    { name: 'Snort', logo: snort },
-    { name: 'Rapid7', logo: rapid7 },
-    { name: 'SolarWinds', logo: solarwinds }
+    // Existing integrations
+    { name: 'Trellix', logo: trellix, color: '#E31E24' },
+    { name: 'LogRhythm', logo: logrhythm, color: '#1B365D' },
+    { name: 'Tenable', logo: tenable, color: '#00A9CE' },
+    { name: 'Snort', logo: snort, color: '#D52B1E' },
+    { name: 'Rapid7', logo: rapid7, color: '#7B2CBF' },
+    { name: 'SolarWinds', logo: solarwinds, color: '#FF6B35' },
+    
+    // New integrations from the list
+    { name: 'Fortigate', logo: 'https://logos-world.net/wp-content/uploads/2022/04/Fortinet-Logo.png', color: '#EE3124' },
+    { name: 'Mimecast', logo: 'https://cdn.worldvectorlogo.com/logos/mimecast.svg', color: '#FF6900' },
+    { name: 'Proofpoint', logo: 'https://www.logo.wine/a/logo/Proofpoint/Proofpoint-Logo.wine.svg', color: '#0066CC' },
+    { name: 'CyberArk', logo: 'https://logos-world.net/wp-content/uploads/2021/02/CyberArk-Logo.png', color: '#1B4D72' },
+    { name: 'KnowBe4', logo: 'https://cdn.worldvectorlogo.com/logos/knowbe4-1.svg', color: '#FF6A00' },
+    { name: 'VMware', logo: 'https://logos-world.net/wp-content/uploads/2020/11/VMware-Logo.png', color: '#607078' },
+    { name: 'Zscaler', logo: 'https://cdn.worldvectorlogo.com/logos/zscaler.svg', color: '#0080FF' },
+    { name: 'Absolute', logo: 'https://www.logo.wine/a/logo/Absolute_Software/Absolute_Software-Logo.wine.svg', color: '#E94B3C' },
+    { name: 'Cisco Umbrella', logo: 'https://www.logo.wine/a/logo/Cisco_Systems/Cisco_Systems-Logo.wine.svg', color: '#1BA0D7' },
+    { name: 'CarbonBlack', logo: 'https://logos-world.net/wp-content/uploads/2021/02/VMware-Carbon-Black-Logo.png', color: '#000000' },
+    { name: 'Sophos', logo: 'https://cdn.worldvectorlogo.com/logos/sophos.svg', color: '#00308F' },
+    { name: 'ExaBeam', logo: 'https://www.exabeam.com/wp-content/themes/exabeam/assets/img/exabeam-logo.svg', color: '#FF6900' },
+    { name: 'Slack', logo: 'https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg', color: '#4A154B' },
+    { name: 'Microsoft Teams', logo: 'https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg', color: '#6264A7' }
   ];
 
   const testimonials = [
