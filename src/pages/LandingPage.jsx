@@ -78,15 +78,48 @@ const LandingPage = () => {
   // Add floating particles to hero
   useEffect(() => {
     const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-      // Add particles
-      for (let i = 0; i < 3; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.animationDelay = `${i * 5}s`;
-        heroSection.appendChild(particle);
+    if (heroSection && !heroSection.querySelector('.floating-bubbles')) {
+      // Add floating bubbles container
+      const bubblesContainer = document.createElement('div');
+      bubblesContainer.className = 'floating-bubbles';
+      
+      // Add multiple bubbles
+      for (let i = 0; i < 5; i++) {
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble hero-bubble';
+        bubble.style.setProperty('--drift', `${Math.random() * 100 - 50}px`);
+        bubblesContainer.appendChild(bubble);
       }
+      
+      heroSection.appendChild(bubblesContainer);
     }
+
+    // Add floating bubbles to other sections
+    const sectionsWithBubbles = ['.features-section', '.integrations-section', '.testimonials-section'];
+    
+    sectionsWithBubbles.forEach(sectionSelector => {
+      const section = document.querySelector(sectionSelector);
+      if (section && !section.querySelector('.floating-bubbles')) {
+        const bubblesContainer = document.createElement('div');
+        bubblesContainer.className = 'floating-bubbles';
+        
+        // Add fewer bubbles for other sections
+        for (let i = 0; i < 3; i++) {
+          const bubble = document.createElement('div');
+          bubble.className = 'bubble';
+          bubble.style.width = `${60 + Math.random() * 40}px`;
+          bubble.style.height = bubble.style.width;
+          bubble.style.left = `${Math.random() * 80 + 10}%`;
+          bubble.style.setProperty('--duration', `${15 + Math.random() * 10}s`);
+          bubble.style.setProperty('--delay', `${Math.random() * 5}s`);
+          bubble.style.setProperty('--drift', `${Math.random() * 100 - 50}px`);
+          bubble.style.animationDelay = bubble.style.getPropertyValue('--delay');
+          bubblesContainer.appendChild(bubble);
+        }
+        
+        section.appendChild(bubblesContainer);
+      }
+    });
   }, []);
 
   const features = [
