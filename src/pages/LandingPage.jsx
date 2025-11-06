@@ -262,8 +262,16 @@ const LandingPage = () => {
           </p>
           <div className="integrations-grid">
             {integrations.map((integration, index) => (
-              <div key={index} className="integration-logo">
+              <div 
+                key={index} 
+                className="integration-logo"
+                style={{
+                  '--brand-color': integration.color,
+                  animationDelay: `${index * 0.1}s`
+                }}
+              >
                 <img src={integration.logo} alt={integration.name} />
+                <div className="integration-name">{integration.name}</div>
               </div>
             ))}
           </div>
