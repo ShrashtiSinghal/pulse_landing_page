@@ -433,6 +433,9 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: titleGlow 3s ease-in-out infinite alternate;
+  padding: 0.1em 0.2em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .section-description {
