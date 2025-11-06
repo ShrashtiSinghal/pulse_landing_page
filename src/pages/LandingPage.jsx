@@ -76,21 +76,21 @@ const LandingPage = () => {
     { name: 'Rapid7', logo: rapid7, color: '#7B2CBF' },
     { name: 'SolarWinds', logo: solarwinds, color: '#FF6B35' },
     
-    // New integrations from the list
-    { name: 'Fortigate', logo: 'https://cdn.worldvectorlogo.com/logos/fortinet-2.svg', color: '#EE3124' },
-    { name: 'Mimecast', logo: 'https://cdn.worldvectorlogo.com/logos/mimecast.svg', color: '#FF6900' },
-    { name: 'Proofpoint', logo: 'https://cdn.worldvectorlogo.com/logos/proofpoint.svg', color: '#0066CC' },
-    { name: 'CyberArk', logo: 'https://cdn.worldvectorlogo.com/logos/cyberark.svg', color: '#1B4D72' },
-    { name: 'KnowBe4', logo: 'https://cdn.worldvectorlogo.com/logos/knowbe4-1.svg', color: '#FF6A00' },
-    { name: 'VMware', logo: 'https://cdn.worldvectorlogo.com/logos/vmware.svg', color: '#607078' },
-    { name: 'Zscaler', logo: 'https://cdn.worldvectorlogo.com/logos/zscaler.svg', color: '#0080FF' },
-    { name: 'Absolute', logo: 'https://cdn.worldvectorlogo.com/logos/absolute-software.svg', color: '#E94B3C' },
-    { name: 'Cisco Umbrella', logo: 'https://cdn.worldvectorlogo.com/logos/cisco-2.svg', color: '#1BA0D7' },
-    { name: 'CarbonBlack', logo: 'https://cdn.worldvectorlogo.com/logos/vmware-carbon-black.svg', color: '#000000' },
-    { name: 'Sophos', logo: 'https://cdn.worldvectorlogo.com/logos/sophos.svg', color: '#00308F' },
-    { name: 'ExaBeam', logo: 'https://cdn.worldvectorlogo.com/logos/exabeam.svg', color: '#FF6900' },
-    { name: 'Slack', logo: 'https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg', color: '#4A154B' },
-    { name: 'Microsoft Teams', logo: 'https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg', color: '#6264A7' }
+    // New integrations from the list - using better, more visible logos
+    { name: 'Fortigate', logo: 'https://1000logos.net/wp-content/uploads/2021/05/Fortinet-logo.png', color: '#EE3124' },
+    { name: 'Mimecast', logo: 'https://companieslogo.com/img/orig/MIME-2e2ac48a.png', color: '#FF6900' },
+    { name: 'Proofpoint', logo: 'https://1000logos.net/wp-content/uploads/2020/08/Proofpoint-Logo.png', color: '#0066CC' },
+    { name: 'CyberArk', logo: 'https://1000logos.net/wp-content/uploads/2020/08/CyberArk-Logo.png', color: '#1B4D72' },
+    { name: 'KnowBe4', logo: 'https://1000logos.net/wp-content/uploads/2020/08/KnowBe4-Logo.png', color: '#FF6A00' },
+    { name: 'VMware', logo: 'https://1000logos.net/wp-content/uploads/2017/06/VMware-Logo.png', color: '#607078' },
+    { name: 'Zscaler', logo: 'https://1000logos.net/wp-content/uploads/2020/08/Zscaler-Logo.png', color: '#0080FF' },
+    { name: 'Absolute', logo: 'https://companieslogo.com/img/orig/ABT-fb9245e0.png', color: '#E94B3C' },
+    { name: 'Cisco', logo: 'https://1000logos.net/wp-content/uploads/2016/11/Cisco-Logo.png', color: '#1BA0D7' },
+    { name: 'CarbonBlack', logo: 'https://1000logos.net/wp-content/uploads/2020/08/Carbon-Black-Logo.png', color: '#000000' },
+    { name: 'Sophos', logo: 'https://1000logos.net/wp-content/uploads/2020/08/Sophos-Logo.png', color: '#00308F' },
+    { name: 'Exabeam', logo: 'https://1000logos.net/wp-content/uploads/2020/08/Exabeam-Logo.png', color: '#FF6900' },
+    { name: 'Slack', logo: 'https://1000logos.net/wp-content/uploads/2021/06/Slack-logo.png', color: '#4A154B' },
+    { name: 'Microsoft Teams', logo: 'https://1000logos.net/wp-content/uploads/2020/08/Microsoft-Teams-Logo.png', color: '#6264A7' }
   ];
 
   const testimonials = [
