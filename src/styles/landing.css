@@ -680,18 +680,6 @@ body {
   position: relative;
 }
 
-.workflow-container::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
-  z-index: 0;
-  animation: flowingLine 3s ease-in-out infinite;
-}
-
 .workflow-step {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-subtle);
@@ -701,7 +689,7 @@ body {
   text-align: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   transform: translateY(30px);
 }
@@ -739,6 +727,32 @@ body {
   z-index: 1;
   position: relative;
   animation: arrowFloat 2s ease-in-out infinite;
+}
+
+/* Animated connecting lines between boxes */
+.workflow-arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  right: -20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
+  transform: translateY(-50%);
+  animation: flowingConnection 3s ease-in-out infinite;
+  z-index: 0;
+}
+
+.workflow-arrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  right: -20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 209, 0.3), transparent);
+  transform: translateY(-50%);
+  z-index: 0;
 }
 
 .workflow-step h3 {
