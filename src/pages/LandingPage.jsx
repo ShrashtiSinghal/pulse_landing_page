@@ -236,6 +236,8 @@ const LandingPage = () => {
                 className="dashboard-image"
               />
               <div className="pulse-wave"></div>
+              <div className="pulse-wave"></div>
+              <div className="pulse-wave"></div>
             </div>
           </div>
         </div>
