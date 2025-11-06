@@ -207,6 +207,49 @@ body {
     repeating-linear-gradient(-90deg, #fff, #fff 1px, transparent 1px, transparent 7.6923%);
   opacity: 0.03;
   pointer-events: none;
+  animation: gridShift 20s linear infinite;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(0, 255, 209, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatSlow 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* Floating particles */
+.hero-section .particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--brand-primary);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: particleFloat 15s linear infinite;
+}
+
+.hero-section .particle:nth-child(1) {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.hero-section .particle:nth-child(2) {
+  top: 60%;
+  left: 80%;
+  animation-delay: 5s;
+}
+
+.hero-section .particle:nth-child(3) {
+  top: 80%;
+  left: 20%;
+  animation-delay: 10s;
 }
 
 .hero-content {
