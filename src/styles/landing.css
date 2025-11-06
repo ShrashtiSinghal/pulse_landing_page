@@ -862,7 +862,7 @@ body {
   width: 120px;
   height: 120px;
   cursor: pointer;
-  transition: transform 0.4s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: bounce 2s ease-in-out infinite;
   text-decoration: none;
 }
@@ -870,6 +870,7 @@ body {
 .mascot-button:hover {
   transform: scale(1.1) rotate(5deg);
   animation-play-state: paused;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 209, 0.6));
 }
 
 .mascot-image {
@@ -877,6 +878,11 @@ body {
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 8px 24px rgba(0, 255, 209, 0.3));
+  transition: all 0.4s ease;
+}
+
+.mascot-button:hover .mascot-image {
+  filter: drop-shadow(0 12px 32px rgba(0, 255, 209, 0.5));
 }
 
 .mascot-tooltip {
@@ -886,20 +892,20 @@ body {
   transform: translateX(-50%) translateY(-8px);
   background: var(--bg-primary);
   color: var(--brand-primary);
-  padding: 8px 16px;
+  padding: 12px 16px;
   font-size: 14px;
   font-weight: 500;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   border: 1px solid var(--border-subtle);
-  border-radius: 0px;
+  border-radius: 8px;
   box-shadow:
-    0 20px 60px rgba(0, 255, 209, 0.1),
+    0 20px 60px rgba(0, 255, 209, 0.15),
     0 -20px 60px rgba(0, 255, 209, 0.1),
     20px 0 60px rgba(0, 255, 209, 0.1),
     -20px 0 60px rgba(0, 255, 209, 0.1);
-
+  backdrop-filter: blur(20px);
   z-index: 10;
   width: 17.5rem;
 }
@@ -910,14 +916,14 @@ body {
   top: 100%;
   left: 75%;
   transform: translateX(-50%);
-  border-width: 6px;
+  border-width: 8px;
   border-style: solid;
   border-color: var(--brand-primary) transparent transparent transparent;
 }
 
 .mascot-button:hover .mascot-tooltip {
   opacity: 1;
-  transform: translateX(-50%) translateY(-12px);
+  transform: translateX(-50%) translateY(-16px);
 }
 
 /* Animations */
