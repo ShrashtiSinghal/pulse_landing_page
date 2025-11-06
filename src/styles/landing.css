@@ -567,6 +567,19 @@ body {
   justify-content: center;
   gap: 40px;
   margin-top: 60px;
+  position: relative;
+}
+
+.workflow-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
+  z-index: 0;
+  animation: flowingLine 3s ease-in-out infinite;
 }
 
 .workflow-step {
@@ -576,13 +589,23 @@ body {
   flex: 1;
   max-width: 350px;
   text-align: center;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.workflow-step.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .workflow-step:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--brand-primary);
-  transform: scale(1.05);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 255, 209, 0.2);
 }
 
 .workflow-number {
@@ -591,24 +614,21 @@ body {
   color: var(--brand-primary);
   opacity: 0.3;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.workflow-step h3 {
-  font-size: 28px;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 16px;
-}
-
-.workflow-step p {
-  font-size: 18px;
-  color: var(--text-secondary);
-  line-height: 1.5;
+.workflow-step:hover .workflow-number {
+  opacity: 0.8;
+  animation: numberPulse 1s ease-in-out;
 }
 
 .workflow-arrow {
   color: var(--brand-primary);
   opacity: 0.5;
+  z-index: 1;
+  position: relative;
+  animation: arrowFloat 2s ease-in-out infinite;
 }
 
 /* Integrations */
