@@ -631,6 +631,24 @@ body {
   animation: arrowFloat 2s ease-in-out infinite;
 }
 
+.workflow-step h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.workflow-step:hover h3 {
+  color: var(--brand-primary);
+}
+
+.workflow-step p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
 /* Integrations */
 .integrations-grid {
   display: grid;
