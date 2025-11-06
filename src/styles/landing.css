@@ -1131,6 +1131,27 @@ body {
   100% { background: linear-gradient(90deg, transparent, transparent, transparent); }
 }
 
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+    scale: 0.5;
+  }
+  5% {
+    opacity: 1;
+    scale: 1;
+  }
+  95% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(var(--drift, 50px)) rotate(360deg);
+    opacity: 0;
+    scale: 0.8;
+  }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .hero-content {
