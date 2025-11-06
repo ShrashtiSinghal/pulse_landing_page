@@ -270,7 +270,14 @@ const LandingPage = () => {
                   animationDelay: `${index * 0.1}s`
                 }}
               >
-                <img src={integration.logo} alt={integration.name} />
+                <img 
+                  src={integration.logo} 
+                  alt={integration.name}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.marginTop = '0';
+                  }}
+                />
                 <div className="integration-name">{integration.name}</div>
               </div>
             ))}
