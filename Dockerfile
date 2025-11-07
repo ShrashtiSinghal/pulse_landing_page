@@ -5,6 +5,20 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Accept build arguments for environment variables
+# PUBLIC_URL is used by Create React App for asset paths
+# Empty string = absolute paths from root (recommended for nginx)
+ARG PUBLIC_URL=
+ARG REACT_APP_ENABLE_VISUAL_EDITS
+ARG REACT_APP_ENABLE_HEALTH_CHECK
+ARG DISABLE_HOT_RELOAD
+
+# Set as environment variables for the build process
+ENV PUBLIC_URL=${PUBLIC_URL}
+ENV REACT_APP_ENABLE_VISUAL_EDITS=${REACT_APP_ENABLE_VISUAL_EDITS}
+ENV REACT_APP_ENABLE_HEALTH_CHECK=${REACT_APP_ENABLE_HEALTH_CHECK}
+ENV DISABLE_HOT_RELOAD=${DISABLE_HOT_RELOAD}
+
 # Copy package files
 COPY package.json yarn.lock ./
 

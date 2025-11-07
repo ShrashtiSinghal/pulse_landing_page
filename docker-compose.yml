@@ -3,6 +3,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        # Set PUBLIC_URL to empty string for absolute paths from root (recommended for nginx)
+        - PUBLIC_URL=${PUBLIC_URL:-}
+        # Optional: Pass other environment variables if needed
+        - REACT_APP_ENABLE_VISUAL_EDITS=${REACT_APP_ENABLE_VISUAL_EDITS:-}
+        - REACT_APP_ENABLE_HEALTH_CHECK=${REACT_APP_ENABLE_HEALTH_CHECK:-}
+        - DISABLE_HOT_RELOAD=${DISABLE_HOT_RELOAD:-}
     container_name: pulse-landing-page
     ports:
       - "3001:80"
